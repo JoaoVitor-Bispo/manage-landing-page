@@ -5,20 +5,34 @@
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro';
 }
+
+@keyframes scroll {
+    to {
+
+    }
+}
+
+
 .wrapper {
     background-image: url(images/bg-simplify-section-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
+
 
 .header {
     display: flex;
     padding: 40px;
     justify-content: space-between;
 }
+
+
 .first-section__container {
     text-align: center;
 }
 .first-section__img {
     width: 75%;
+    max-width: 400px;
 }
 .first-section__content {
     margin: auto;
@@ -26,7 +40,16 @@
 }
 .first-section__title {
     font-size: 35px;
+    margin-bottom: 8px;
 }
+.first-section__text {
+    max-width: 400px;
+    margin: auto;
+}
+.first-section .c-button {
+    margin-top: 16px;
+}
+
 
 .middleSection__list {
     list-style: none;
@@ -43,11 +66,65 @@
 .middleSection__list__title {
     display: inline-block;
 }
-.subFooter {
-    background-image: url(./images/bg-simplify-section-mobile.svg);
+
+
+.lastSection {
+    text-align: center;
+    
 }
 .lastSection__slider {
-    
+    overflow-x: hidden;
+    white-space: nowrap;
+    margin: 40px 0px;
+}
+.lastSection__title {
+    font-size: 32px;
+}
+
+
+.subFooter {
+    background-image: url(./images/bg-simplify-section-mobile.svg);
+    background-size: cover;
+    background-color: #F25F3A;
+    padding-top: 65px;
+    text-align: center;
+}
+.subFooter__title {
+    margin-bottom: 40px;
+}
+
+
+.footer {
+    background-color: #1D1E25;
+    padding: 50px;
+    text-align: center;
+}
+.footer__input {
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+}
+.footer .c-button {
+    width: 80px;
+    padding: 14px;
+}
+.footer__list {
+    color: #CDCECF;
+    list-style-type: none;
+    column-gap: 1px;
+    column-count: 2;
+    margin: 40px;
+    text-align: left;
+}
+.footer__item {
+    margin: 10px;
+}
+.footer__socialMedia__img {
+    width: 30px;
+    margin: 0px 8px;
+}
+.footer__logoContainer {
+    margin: 25px;
 }
 
 
@@ -64,10 +141,19 @@
     background-color: white;
     color: #F25F3A;
 }
+.c-button:hover {
+    background-color: #ec795c;
+}
+.c-button--reverse:hover {
+    background-color: #cfcdcc;
+}
+
+
 .c-comment {
     background-color: #FAFAFA;
-    width: 350px;
+    width: 400px;
     padding: 15px;
+    white-space: wrap;
     margin: 30px;
     display: inline-block;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.301);
@@ -82,8 +168,8 @@
 
 }
 .u-borderSpace {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 35px;
+    padding-right: 35px;
 }
 .u-textStyle {
     color: #9095A7;

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="medium.css">
+    <link rel="stylesheet" href="large.css">
     <title>Manage Landing Page</title>
 </head>
 <body>
@@ -12,7 +14,7 @@
         <header class="header u-border-space">
             <div class="header__img"><img src="images/logo.svg" alt=""></div>
 
-            <i class="js-menu"><img src="images/icon-hamburger.svg" alt=""></i>
+            <i class="js-menu header__hamburguer"><img src="images/icon-hamburger.svg" alt=""></i>
             <nav class="header__menu is-disabled">
                 <a href="#" class="header__link">Pricing</a>
                 <a href="#" class="header__link">Product</a>
@@ -20,7 +22,7 @@
                 <a href="#" class="header__link">Careers</a>
                 <a href="#" class="header__link">Community</a>
             </nav>
-            <div class="is-disabled"><button class="header__button c-button">Get started!</button></div>
+            <div class="header__button is-disabled"><button class="c-button">Get started!</button></div>
         </header>
 
         <main class="main">
@@ -36,10 +38,10 @@
             </section>
     </div>
 
-        <section class="middle-section u-sectionSpace u-borderSpace">
-            <div class="middle-section__content">
-                <h2 class="middle-section__title">What's different about Manage?</h2>
-                <p class="middle-section__text u-textStyle">
+        <section class="middleSection u-sectionSpace u-borderSpace">
+            <div class="middleSection__content">
+                <h2 class="middleSection__title">What's different about Manage?</h2>
+                <p class="middleSection__text u-textStyle">
                     Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.
                 </p>
             </div>
@@ -75,11 +77,11 @@
             </ul>
         </section>
 
-        <section class="lastSection u-sectionSpace u-borderSpace">
+        <section class="lastSection u-sectionSpace">
             <h1 class="lastSection__title">Whay they've said</h1>
 
-            <div class="lastSection__slider">
-                <div class="c-comment main-comment">
+            <div class="lastSection__slider js-slider">
+                <div class="c-comment c-comment__firstComment">
                     <img src="images/avatar-anisha.png" alt="" class="c-comment__img">
                     <h4 class="c-comment__title">Anisha Li</h4>
 
@@ -123,8 +125,34 @@
             <div><button class="c-button c-button--reverse">Get Started</button></div>
         </div>
 
-        <footer class="u-borderSpace">
+        <footer class="footer u-borderSpace">
+            <div class="footer__intro">
+                <input type="text" name="search" id="search" class="footer__input" placeholder="Updates in your box...">
+                <button class="c-button">Go</button>
+            </div>
 
+
+            <ul class="footer__list">
+                <li class="footer__item">Home</li>
+                <li class="footer__item">Price</li>
+                <li class="footer__item">Products</li>
+                <li class="footer__item">About us</li>
+                <li class="footer__item">Career</li>
+                <li class="footer__item">Community</li>
+                <li class="footer__item">Privacy Policy</li>
+            </ul>
+
+            <div class="footer__socialMedia">
+                <img src="images/icon-facebook.svg" alt="" class="footer__socialMedia__img">
+                <img src="images/icon-youtube.svg" alt="" class="footer__socialMedia__img">
+                <img src="images/icon-twitter.svg" alt="" class="footer__socialMedia__img">
+                <img src="images/icon-pinterest.svg" alt="" class="footer__socialMedia__img">
+                <img src="images/icon-instagram.svg" alt="" class="footer__socialMedia__img">
+            </div>
+
+            <div class="footer__logoContainer">
+                <img src="images/logo.svg" alt="" class="footer__logo">
+            </div>
         </footer>
 
     </main>
