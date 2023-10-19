@@ -5,7 +5,12 @@
         justify-content: space-around;
     }
     .header__menu {
+        background-color: white;
+        height: fit-content;
+        width: fit-content;
+        padding: 0;
         display: block;
+        position: static;
     }
     .header__hamburguer {
         display: none;
@@ -14,8 +19,7 @@
         display: block;
     }
     .header__link {
-        color: #242D52;
-        text-decoration: none;
+        display: inline;
         margin: 0px 10px;
     }
     
@@ -61,12 +65,28 @@
     .middleSection__list__text {
         margin-left: 62px;
     }
+
     
-    
-    
-    .u-textStyle {
-    
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
     }
+    .footer__netWorking {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    .footer__socialMedia img {
+        width: 20px;
+        margin: 0px 3px;
+    }
+    .footer__item {
+        text-align: left;
+    }
+
+
     .u-borderSpace {
         padding-left: 50px;
         padding-right: 50px;
