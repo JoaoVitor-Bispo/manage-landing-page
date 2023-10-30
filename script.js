@@ -55,4 +55,3 @@ setInterval(() => {
     firstCommentFromSlide.style.marginLeft = `-${controlForScroll}%`    
 
 }, 3000);
-
