@@ -35,8 +35,12 @@
 .header__link {
     color: #242D52;
     display: block;
+    width: fit-content;
     margin: 10px auto;
     text-decoration: none;
+}
+.header__link:hover {
+    color: #F25F3A;
 }
 
 
@@ -85,12 +89,12 @@
     text-align: center;
 }
 .lastSection__slider {
-    width: 80%;
+    width: 400px;
     margin: 40px auto;
     overflow-x: hidden;
     white-space: nowrap;
     border-radius: 6px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.144);
+    /* box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.144); */
 }
 .lastSection__title {
     font-size: 32px;
@@ -166,12 +170,13 @@
     background-color: #cfcdcc;
 }
 .c-comment {
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     padding: 15px;
     width: 410px;
     display: inline-block;
     white-space: wrap;
     text-align: center;
+    border-radius: 10px;
 }
 .c-comment__img {
     width: 55px;

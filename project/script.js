@@ -2,38 +2,57 @@ const firstCommentFromSlide = document.querySelector('.js-firstComment');
 const comment = [...document.querySelectorAll('.c-comment')]
 const menu = document.querySelector('.js-menu')
 const nav = document.querySelector('.js-nav')
+const links = [...document.querySelectorAll('.js-link')]
 
 let controlForScroll = 0
+let menuImage = false
+const newDiv = nav.cloneNode(false)
+newDiv.classList.remove('is-disabled')
 
 menu.addEventListener('click', e => {
 
-    if(nav.style.display == 'none') {
-        nav.style.display = 'block'
-        menu.children[0].src = 'images/icon-close.svg'
+
+    menuImage === false ? menuImage = true : menuImage = false;
+    
+    if(menuImage === true) {
+        menu.children[0].src = './images/icon-close.svg';
+        
+        links.map((element) => {
+            const newLinks = document.createElement('a');
+            newLinks.textContent = element.textContent;
+            newLinks.href = element.href;
+            newLinks.classList = element.classList
+            newDiv.appendChild(newLinks);
+        });
+        
+        document.documentElement.append(newDiv);
+        return false;
+    };
+    
+    menu.children[0].src = './images/icon-hamburger.svg';
+    [...newDiv.children].map(element => element.remove())
+    newDiv.remove();
+})
+
+setInterval(() => {
+    
+    if(document.documentElement.getBoundingClientRect().width >= 1008) {
+        
+        if(controlForScroll == 100) {
+            controlForScroll = -50
+        }
+    
+        controlForScroll += 50
+        firstCommentFromSlide.style.marginLeft = `-${controlForScroll}%`        
         return false
     }
 
-    nav.style.display = 'none'
-    menu.children[0].src = 'images/icon-hamburger.svg'
-})
+    if(controlForScroll >= 300) {
+        controlForScroll = -104
+    }
 
-// setInterval(() => {
+    controlForScroll += 104
+    firstCommentFromSlide.style.marginLeft = `-${controlForScroll}%`    
 
-
-    
-//     for(let c in comment) {
-        
-//         if(c > 0) {
-//             comment[c - 1] = comment[c]
-//         }
-//         else {
-//             comment[comment.length] = comment[0]
-//             comment.shift()
-//         }
-//         comment[0].style.marginLeft = '-50%'
-//     }
-    
-
-
-// }, 3000);
+}, 3000);
 
